@@ -120,7 +120,7 @@ void searchData() {
 		Node* currentNode = START;
 		while (currentNode != NULL) {
 			if (currentNode->noMhs == nim) {
-				cout << "NIM: " << curentNode->noMhs << ", Nama: " << currentNode->name << endl;
+				cout << "NIM: " << currentNode->noMhs << ", Nama: " << currentNode->name << endl;
 				return;
 			}
 			currentNode = currentNode->next;
@@ -159,6 +159,16 @@ int main() {
 					system("cls");
 					break;
 				}
+
+				int nim;
+				cout << "Masukkan NIM; ";
+				cin >> nim;
+				if (deleteNode(nim)) {
+					cout << "nim: " << nim << " berhasil dihapus" << endl;
+					system("pause");
+					system("cls");
+				}
+
 			}
 
 		}
